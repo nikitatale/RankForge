@@ -5,32 +5,32 @@ export const homeFeaturesData = [
     {
         icon: <BarChart3Icon size={28} />,
         title: "SEO Score",
-        desc: "Get a comprehensive SEO score analyzing 50+ ranking factors with AI-powered insights.",
+        desc: "Measure your website's overall SEO health with an AI-powered score based on 50+ critical ranking factors.",
     },
     {
         icon: <ZapIcon size={28} />,
         title: "Performance",
-        desc: "Analyze load times, page size, and Core Web Vitals to maximize your site speed.",
+        desc: "Evaluate page speed, Core Web Vitals, and load efficiency to deliver a faster user experience.",
     },
     {
         icon: <ShieldIcon size={28} />,
         title: "Best Practices",
-        desc: "Check meta tags, heading structure, image optimization, and technical SEO health.",
+        desc: "Audit technical SEO essentials, including meta tags, headings, and image optimization.",
     },
     {
         icon: <EyeIcon size={28} />,
         title: "Accessibility",
-        desc: "Ensure your site is accessible to all users with alt text, ARIA, and contrast checks.",
+        desc: "Ensure your website is usable and compliant for all visitors with accessibility checks.",
     },
     {
         icon: <TargetIcon size={28} />,
         title: "Keyword Analysis",
-        desc: "Discover top keywords, density analysis, and content optimization opportunities.",
+        desc: "Uncover keyword opportunities and optimize your content for better search visibility.",
     },
     {
         icon: <TrendingUpIcon size={28} />,
         title: "Actionable Fixes",
-        desc: "Get prioritized, actionable recommendations to boost your search rankings.",
+        desc: "Get clear, prioritized recommendations to improve your site's SEO performance.",
     },
 ];
 

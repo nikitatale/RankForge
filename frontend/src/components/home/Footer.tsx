@@ -1,8 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { ArrowUp } from "lucide-react";
 import { homefooterLinks } from "../../assets/assets";
 import { SiX, SiInstagram, SiFacebook, SiGithub } from "@icons-pack/react-simple-icons";
 
 function RankForgeLogo({ size = 20 }: { size?: number }) {
+
     return (
         <svg width={size} height={size} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6 26 L12 10 L18 19 L22 13" stroke="url(#lgf1)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -18,6 +20,14 @@ function RankForgeLogo({ size = 20 }: { size?: number }) {
 }
 
 export default function Footer() {
+
+ const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
     return (
         <footer className="relative border-t border-border py-14 bg-card">
             <div className="neon-line absolute top-0 left-0 right-0" />
@@ -62,10 +72,11 @@ export default function Footer() {
 
                 <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="mono text-xs text-muted-foreground/60">&copy; {new Date().getFullYear()} RankForge. All rights reserved.</p>
-                    <div className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                        <span className="mono text-[11px] text-muted-foreground/50">All Systems Operational</span>
-                    </div>
+                      <div className="flex items-center gap-3">
+                      <button onClick={scrollToTop} aria-label="Scroll to top" className="p-2 rounded-full border border-border hover:bg-muted transition-colors" >
+                       <ArrowUp size={16} />
+                      </button>
+                </div>
                 </div>
             </div>
         </footer>

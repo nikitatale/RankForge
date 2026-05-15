@@ -16,7 +16,7 @@ export default function HowItWorks() {
                         Three steps to <span className="gradient-text">dominate search</span>
                     </h2>
                     <p className="text-muted-foreground max-w-xl mx-auto text-sm">
-                        RankForge uses real browser automation + AI to simulate a real user experience and provide deep SEO insights.
+                       RankForge combines real browser automation and AI to simulate authentic user interactions and deliver comprehensive, actionable SEO insights.
                     </p>
                 </div>
 

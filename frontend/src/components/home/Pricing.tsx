@@ -15,7 +15,7 @@ export default function Pricing() {
                     <h2 className="syne text-3xl sm:text-4xl md:text-5xl font-700 mb-4 text-foreground">
                         Simple, <span className="gradient-text">Honest Pricing</span>
                     </h2>
-                    <p className="text-muted-foreground text-sm">Start free. Upgrade when you're ready to forge ahead.</p>
+                    <p className="text-muted-foreground text-sm">Start free. Scale when you're ready.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-3xl mx-auto">

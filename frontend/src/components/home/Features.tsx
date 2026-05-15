@@ -13,7 +13,7 @@ export default function Features() {
                         Everything to <span className="gradient-text">Rank Higher</span>
                     </h2>
                     <p className="text-muted-foreground max-w-lg mx-auto text-sm leading-relaxed">
-                        Comprehensive SEO analysis powered by real browser rendering and artificial intelligence - built for developers and marketers alike.
+                        Enterprise-grade SEO analysis powered by real browser rendering and AI, built for teams that care about performance and search visibility.
                     </p>
                 </div>
 

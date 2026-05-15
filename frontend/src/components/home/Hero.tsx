@@ -70,7 +70,7 @@ export default function Hero() {
                 </form>
 
                 <p className="text-muted-foreground/60 text-xs mb-12 animate-fade-in" style={{ animationDelay: "200ms" }}>
-                    Free - No credit card required • 5 analyses per day
+                    Free plan with 5 analyses daily • No credit card needed.
                 </p>
 
               
