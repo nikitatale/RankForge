@@ -1,16 +1,26 @@
 import { Link } from "react-router-dom";
 import { CheckIcon, ZapIcon } from "lucide-react";
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 export default function Pricing() {
     const freeFeatures = ["5 analyses per day", "Full SEO report", "Keyword analysis", "Issue detection", "Export results"];
     const proFeatures = ["Unlimited analyses", "Priority processing", "Competitor analysis", "Historical tracking", "API access", "Email reports"];
+
+    const [headerRef, headerVisible] = useScrollAnimation({ threshold: 0.4 });
+    const [freeRef, freeVisible] = useScrollAnimation({ threshold: 0.2, rootMargin: "0px 0px -120px 0px" });
+    const [proRef, proVisible] = useScrollAnimation({ threshold: 0.2, rootMargin: "0px 0px -120px 0px" });
 
     return (
         <section className="relative py-24 md:py-30 overflow-hidden">
             <div className="absolute inset-0 bg-dot-pattern opacity-[0.04] pointer-events-none" />
 
             <div className="max-w-5xl w-full mx-auto px-4">
-                <div className="text-center mb-14">
+
+            
+                <div
+                    ref={headerRef}
+                    className={`text-center mb-14 anim-fade-up ${headerVisible ? "anim-visible" : ""}`}
+                >
                     <span className="tag-pill mb-4 inline-flex">Pricing</span>
                     <h2 className="syne text-3xl sm:text-4xl md:text-5xl font-700 mb-4 text-foreground">
                         Simple, <span className="gradient-text">Honest Pricing</span>
@@ -19,8 +29,13 @@ export default function Pricing() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-3xl mx-auto">
-               
-                    <div className="glass card-hover p-8 flex flex-col">
+
+                  
+                    <div
+                        ref={freeRef}
+                        className={`glass card-hover p-8 flex flex-col anim-fade-left ${freeVisible ? "anim-visible" : ""}`}
+                        style={{ transitionDelay: "0ms" }}
+                    >
                         <div className="mb-6">
                             <span className="mono text-xs text-muted-foreground uppercase tracking-widest">Starter</span>
                             <div className="flex items-end gap-1 mt-2">
@@ -32,8 +47,10 @@ export default function Pricing() {
                         <ul className="space-y-2.5 mb-8 flex-1">
                             {freeFeatures.map((item) => (
                                 <li key={item} className="flex items-center gap-2.5 text-sm text-muted-foreground">
-                                    <div className="w-4 h-4 rounded-full flex items-center justify-center shrink-0"
-                                        style={{ background: "rgba(52,211,153,0.12)", border: "1px solid rgba(52,211,153,0.2)" }}>
+                                    <div
+                                        className="w-4 h-4 rounded-full flex items-center justify-center shrink-0"
+                                        style={{ background: "rgba(52,211,153,0.12)", border: "1px solid rgba(52,211,153,0.2)" }}
+                                    >
                                         <CheckIcon size={10} className="text-emerald-400" />
                                     </div>
                                     {item}
@@ -49,13 +66,20 @@ export default function Pricing() {
                         </Link>
                     </div>
 
-                   
-                    <div className="relative rounded-2xl p-8 flex flex-col overflow-hidden"
-                        style={{ background: "var(--card)", border: "1px solid rgba(192,132,252,0.25)" }}
+                  
+                    <div
+                        ref={proRef}
+                        className={`relative rounded-2xl p-8 flex flex-col overflow-hidden anim-fade-right ${proVisible ? "anim-visible" : ""}`}
+                        style={{
+                            background: "var(--card)",
+                            border: "1px solid rgba(192,132,252,0.25)",
+                            transitionDelay: "80ms",
+                        }}
                     >
-                     
+                       
                         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-px gradient-bg opacity-60" />
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-8 pointer-events-none"
+                        <div
+                            className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-8 pointer-events-none"
                             style={{ background: "radial-gradient(ellipse, rgba(168,85,247,0.2) 0%, transparent 70%)" }}
                         />
 
@@ -77,8 +101,10 @@ export default function Pricing() {
                         <ul className="space-y-2.5 mb-8 flex-1">
                             {proFeatures.map((item) => (
                                 <li key={item} className="flex items-center gap-2.5 text-sm text-muted-foreground">
-                                    <div className="w-4 h-4 rounded-full flex items-center justify-center shrink-0"
-                                        style={{ background: "rgba(192,132,252,0.12)", border: "1px solid rgba(192,132,252,0.2)" }}>
+                                    <div
+                                        className="w-4 h-4 rounded-full flex items-center justify-center shrink-0"
+                                        style={{ background: "rgba(192,132,252,0.12)", border: "1px solid rgba(192,132,252,0.2)" }}
+                                    >
                                         <CheckIcon size={10} className="text-primary" />
                                     </div>
                                     {item}
